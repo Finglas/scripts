@@ -55,7 +55,6 @@ function CheckProjectFiles() {
     $projects = Get-ChildItem .\ -Recurse -Filter "*.csproj" | Where-Object { $_.Name -match "Asos.*"}
 
     foreach ($project in $projects) {
-        echo $project.Name
         CheckProjectName $project
         CheckAssemblyName $project
         CheckRootNamespace $project
