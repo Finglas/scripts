@@ -3,7 +3,8 @@
 
     if ($projectName.Contains("Test")) {
         if (!$projectName.EndsWith("UnitTests") -and !$projectName.EndsWith("IntegrationTests")) {
-            echo $projectName
+            $message = $projectName + " is not named correctly. Must end with UnitTests or IntegrationTests."
+            echo $message
         }
     } 
 }
@@ -14,7 +15,8 @@ function CheckRootNamespace($project) {
     $expectedRootNamespace = ("<RootNamespace>" + $projectName + "</RootNamespace>")
 
     if (!$rootNamespace.Line.Trim().Equals($expectedRootNamespace.Trim())) {
-        echo $projectName
+        $message = $projectName + " root namespaces is not named correctly. Should match project name."
+        echo $message
     }
 
 }
@@ -25,7 +27,8 @@ function CheckAssemblyName($project) {
     $expectedAssemblyName = ("<AssemblyName>" + $projectName + "</AssemblyName>")
 
     if (!$assemblyName.Line.Trim().Equals($expectedAssemblyName.Trim())) {
-        echo $projectName
+        $message = $projectName + " assembly name is not named correctly. Should match project name."
+        echo $message
     }
 }
 
