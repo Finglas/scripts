@@ -1,0 +1,10 @@
+{
+    "font_size": 14,
+    "translate_tabs_to_spaces": true,
+    "highlight_line" : true,
+    "line_padding_bottom" : 4,
+    "highlight_modified_tabs": true,
+    "bold_folder_labels": true,
+    "trim_trailing_white_space_on_save": true,
+    "auto_complete_delay": 0,
+}
